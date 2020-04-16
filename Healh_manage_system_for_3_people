@@ -1,0 +1,95 @@
+# this is given task by CodeWithHarry
+def gettime():
+    import datetime
+    return datetime.datetime.now()
+
+def take(n):
+    if n == 1:
+        a = int(input("Enter 1for Excersise and 2for Food"))
+        if a == 1:
+            v = input("Excersise")
+            with open("harry-ex.txt","a") as op:
+                op.write(str([str(gettime())])+ ":" + v +"\n")
+            print("sucessfully added")
+        elif a == 2:
+            v = input("Food")
+            with open("harry-food.txt","a") as op:
+                op.write(str([str(gettime())]) + ":" + v +"\n")
+            print("sucessfully added")
+        else:
+            print("Enter valid one")
+    elif n == 2:
+        a = int(input("Enter 1for Excersise and 2for Food"))
+        if a == 1:
+            v = input("Excersise")
+            with open("rohan-ex.txt","a") as op:
+                op.write(str([str(gettime())]) + ":" + v +"\n")
+            print("sucessfully added")
+        elif a == 2:
+            v = input("Food")
+            with open("rohan-food.txt","a") as op:
+                op.write(str([str(gettime())]) + ":" + v +"\n")
+            print("sucessfully added")
+        else:
+            print("Enter valid one")
+    elif n == 3:
+        a = int(input("Enter 1for Excersise and 2for Food"))
+        if a == 1:
+            v = input("Excersise")
+            with open("hammad-ex.txt","a") as op:
+                op.write(str([str(gettime())]) + ":" + v +"\n")
+            print("sucessfully added")
+        elif a == 2:
+            v = input("Food")
+            with open("hammad-food.txt","a") as op:
+                op.write(str([str(gettime())]) + ":" + v +"\n")
+            print("sucessfully added")
+        else:
+            print("Enter valid one")
+
+def retrive(l):
+    if l == 1:
+        a = int(input("Enter 1for Excersise and 2for Food"))
+        if a == 1:
+            with open("harry-ex.txt") as op:
+               m = op.readlines()
+            print(m,end="")
+        elif a == 2:
+            with open("harry-food.txt") as op:
+                m = op.readlines()
+            print(m,end="")
+        else:
+            print("Enter valid one")
+    if l == 2:
+        a = int(input("Enter 1for Excersise and 2for Food"))
+        if a == 1:
+            with open("rohan-ex.txt") as op:
+               m = op.readlines()
+            print(m,end="")
+        elif a == 2:
+            with open("rohan-food.txt") as op:
+                m = op.readlines()
+            print(m,end="")
+        else:
+            print("Enter valid one")
+    if l == 3:
+        a = int(input("Enter 1for Excersise and 2for Food"))
+        if a == 1:
+            with open("hammad-ex.txt") as op:
+               m = op.readlines()
+            print(m,end="")
+        elif a == 2:
+            with open("hammad-food.txt") as op:
+                m = op.readlines()
+            print(m,end="")
+        else:
+            print("Enter valid one")
+
+
+d = int(input("1.Add 2.Retrive"))
+if d == 1:
+    b = int(input("Enter 1.Harry 2.Rohan 3.Hammad"))
+    take(b)
+elif d == 2:
+    b = int(input("Enter 1.Harry 2.Rohan 3.Hammad"))
+    retrive(b)
